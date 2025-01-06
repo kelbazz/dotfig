@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Kelbazz
+	email = its.kelbaz+code@gmail.com
+[credential]
+	helper = store
