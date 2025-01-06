@@ -21,10 +21,14 @@ install_flatpak_packages() {
 # Function to set up stow configurations
 setup_stow() {
     echo "Setting up symbolic links with stow..."
-    cd ~/dotfiles
-    stow helix
-    stow nushell
-    stow ghostty
+    cd ./dotfiles/
+
+    for dir in *; do
+        echo "Adding config for $dir"
+        stow -t ~ $dir
+    done
+
+    cd ..
 }
 
 # Check for pacman and install if necessary
